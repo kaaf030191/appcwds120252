@@ -1,12 +1,26 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+	selector: 'app-root',
+	imports: [],
+	templateUrl: './app.html',
+	styleUrl: './app.css'
 })
+
 export class App {
-  protected readonly title = signal('appcwds120252');
+	fullName: string = '';
+
+	constructor() {}
+
+	ngOnInit(): void {
+		this.fullName = 'Kevin Arnold Arias Figueroa';
+	}
+
+	changeData(): void {
+		if(this.fullName == '...') {
+			this.fullName = 'Kevin Arnold Arias Figueroa';
+		} else {
+			this.fullName = '...';
+		}
+	}
 }
