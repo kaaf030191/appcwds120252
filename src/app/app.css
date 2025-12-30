@@ -1,0 +1,9 @@
+#sectionBody {
+    padding-top: 45px;
+}
+
+#sectionBody > div {
+    background-color: #f5f5f5;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}

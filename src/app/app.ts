@@ -1,26 +1,17 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { Header } from './partial/header/header';
 
 @Component({
 	selector: 'app-root',
-	imports: [],
+	imports: [
+		RouterOutlet,
+		Header
+	],
 	templateUrl: './app.html',
 	styleUrl: './app.css'
 })
 
 export class App {
-	fullName: string = '';
-
 	constructor() {}
-
-	ngOnInit(): void {
-		this.fullName = 'Kevin Arnold Arias Figueroa';
-	}
-
-	changeData(): void {
-		if(this.fullName == '...') {
-			this.fullName = 'Kevin Arnold Arias Figueroa';
-		} else {
-			this.fullName = '...';
-		}
-	}
 }

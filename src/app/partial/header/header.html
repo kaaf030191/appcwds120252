@@ -1,0 +1,22 @@
+<header class="main-header">
+	<div class="container">
+		<div class="logo">
+			<a routerLink="/">
+				<span class="brand-text">Mi<span>App</span></span>
+			</a>
+		</div>
+		<button class="menu-toggle" (click)="toggleMenu()" aria-label="Abrir menú">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</button>
+		<nav class="nav-menu" [class.active]="isMenuOpen">
+			<ul>
+				<li><a href="/" (click)="closeMenu()" routerLinkActive="active">Inicio</a></li>
+				<li><a href="person/insert" (click)="closeMenu()" routerLinkActive="active">Insertar</a></li>
+				<li><a href="person/getall" (click)="closeMenu()" routerLinkActive="active">Listar</a></li>
+				<li><a href="/" (click)="closeMenu()" routerLinkActive="active" class="btn-contact">Iniciar Sesión</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
